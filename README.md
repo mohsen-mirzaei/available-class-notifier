@@ -1,5 +1,5 @@
 # Sess available class notifier
-A project that notifies you when specific sections of a class are available. 
+A project that notifies you by playing an alarm sound when specific sections of a class are available. 
 
 ## Installation
 Use the package manager pip to install the requirements.
