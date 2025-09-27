@@ -5,3 +5,4 @@ plg.py
 .idea/vcs.xml
 .idea/inspectionProfiles/profiles_settings.xml
 .idea/.name
+.idea/.gitignore
