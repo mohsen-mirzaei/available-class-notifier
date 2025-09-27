@@ -4,16 +4,12 @@ from time import sleep
 from playsound import playsound
 import datetime
 
-# Dictionary mapping course numbers to their sections to check
 COURSES = {
     "۱۲۰۶۳۱۸۰۱": [4, 5],
     "۱۲۰۶۳۱۱۴۱": [1]
-    # "۲۹۰۳۳۲۲۱۱": [1]
 }
 SOUND_PATH = "alarm.mp3"
 WAIT_TIME = 15
-
-# playsound(SOUND_PATH)
 
 
 playsound(SOUND_PATH)
