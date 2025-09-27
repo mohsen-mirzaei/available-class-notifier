@@ -4,12 +4,16 @@ from time import sleep
 from playsound import playsound
 import datetime
 
-subject_numbers = ["۳۴۰۱۳۸۵۳۱", "۳۴۰۱۳۸۵۹۱"]
-sections = [[1], [4]]
+# Dictionary mapping course numbers to their sections to check
+COURSES = {
+    "۱۲۰۶۳۱۸۰۱": [4, 5],
+    "۱۲۰۶۳۱۱۴۱": [1]
+    # "۲۹۰۳۳۲۲۱۱": [1]
+}
 SOUND_PATH = "alarm.mp3"
-WAIT_TIME = 30
+WAIT_TIME = 15
 
-playsound(SOUND_PATH)
+# playsound(SOUND_PATH)
 
 
 def persian_to_english(number_in_string):
@@ -36,12 +40,12 @@ while True:
     if err_count > 3:
         playsound(SOUND_PATH)
 
-    for subject_number in subject_numbers:
-        for section in sections[subject_numbers.index(subject_number)]:
+    for course_number, course_sections in COURSES.items():
+        for section in course_sections:
             try:
-                subject_number_elements = driver.find_elements(By.XPATH, f"//*[contains(text(), '{subject_number}')]")
-                subject_row = subject_number_elements[section - 1].find_element(By.XPATH, "..")
-                subject_row.click()
+                course_number_elements = driver.find_elements(By.XPATH, f"//*[contains(text(), '{course_number}')]")
+                course_row = course_number_elements[section - 1].find_element(By.XPATH, "..")
+                course_row.click()
                 sleep(3)
 
                 student_count = persian_to_english(driver.find_element(By.ID, "edStdCount").text)
