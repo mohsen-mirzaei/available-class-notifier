@@ -16,6 +16,9 @@ WAIT_TIME = 15
 # playsound(SOUND_PATH)
 
 
+playsound(SOUND_PATH)
+
+
 def persian_to_english(number_in_string):
     difference = ord("۱") - ord("1")
     result = 0
