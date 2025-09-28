@@ -32,6 +32,7 @@ WAIT_TIME = 15
 
 Notes:
 - Copy the course numbers exactly as displayed on SESS. The script searches the page text for those strings.
+- The sound will be played once when the script is run. this is to make sure that everything is working and the sound can be heard clearly.
 
 ## Run
 ```powershell
